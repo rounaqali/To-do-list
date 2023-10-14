@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+        
+        .container {
+            border: white 3px solid;
+            width: 250px;
+            text-align: center;
+            margin: auto;
+        }
+        
+        h1 {
+            color: aqua;
+        }
+        
+        button {
+            background-color: black;
+            color: aqua;
+            border: 1px solid;
+            border-radius: 4px;
+            height: 22px;
+        }
+        
+        #inp {
+            background-color: white;
+            border: 1px solid;
+            border-radius: 4px;
+            text-align: center;
+            height: 18px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <div class="input">
+            <input type="text" placeholder="Enter Your Wish" id="inp">
+            <button onclick="fun()">Add</button>
+        </div>
+        <div class="text"></div>
+    </div>
+    <script>
+        let input = document.getElementById("inp");
+        let text = document.querySelector(".text");
+
+        function fun() {
+            if (input.value == "") {
+                alert("Please Enter Your Wish")
+            } else {
+                let newEle = document.createElement("ul");
+                newEle.innerHTML = '${input.value}';
+                text.appendChild(newEle)
+                inputs.value = ""
+            }
+        }
+    </script>
+</body>
+
+</html>
